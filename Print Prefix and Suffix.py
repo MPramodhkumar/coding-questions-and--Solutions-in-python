@@ -1,18 +1,9 @@
 s = input()
-prefixes = []
-prefix = ""
-for i in s:
-    prefix += i
-    prefixes.append(prefix)
-suffixes = []
-suffix = ""
-for j in reversed(s):
-    suffix += j
-    suffixes.append(suffix)
-
-for i in prefixes:
-    print(i)
-
-
-for j in suffixes:
-    print(j)
+for j in range(len(s)):
+    prefix = s[: j + 1]
+    print(prefix)
+print()
+for k in range(len(s) - 1, -1, -1):
+    suffix = s[k:]
+    print(suffix)
+print()
